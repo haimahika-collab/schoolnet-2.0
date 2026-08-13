@@ -46,4 +46,16 @@ Verified metrics and their source metadata live in `src/data/site-content.ts`. T
 
 ## Deployment direction
 
-The current homepage is prerendered as static content and is compatible with an extremely low-cost Cloudflare Pages deployment. If future phases introduce Next.js server features, use the current Cloudflare Workers/OpenNext path instead of forcing a static export.
+The application deploys to Cloudflare Workers through vinext and Cloudflare's
+Vite plugin. The production build generates the Worker entry point, static
+assets and Wrangler deployment configuration.
+
+```bash
+npm run deploy:dry-run
+npm run deploy
+```
+
+For automatic deployments, connect this repository to Cloudflare Workers
+Builds with `main` as the production branch, `npm run build` as the build
+command and `npx wrangler deploy` as the deploy command. The Worker name is
+`schoolnet-india-redesign`.
