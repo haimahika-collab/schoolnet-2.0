@@ -38,10 +38,10 @@ export function Header() {
                     ))}
                   </div>
                 ))}
-                <Link className="mega-feature" href="/#contact">
-                  <span className="feature-kicker">School transformation</span>
-                  <strong>Technology is one part. We help connect the whole.</strong>
-                  <span>Explore solutions <ArrowRight size={16} /></span>
+                <Link className="mega-feature" href="/inclusive-learning">
+                  <span className="feature-kicker">New · Inclusive Lesson Studio</span>
+                  <strong>See how one lesson can create more ways into learning.</strong>
+                  <span>Build a lesson plan <ArrowRight size={16} /></span>
                 </Link>
               </div>
             </div>
@@ -80,6 +80,7 @@ export function Header() {
             <Link href={href} key={label} onClick={() => setOpen(false)}>{label}</Link>
           ))}
           <Link href="/about" onClick={() => setOpen(false)}>About</Link>
+          <Link href="/inclusive-learning" onClick={() => setOpen(false)}>Inclusive Lesson Studio</Link>
           <DemoTrigger className="button" onOpen={() => setOpen(false)}>Book a school demo</DemoTrigger>
           <p className="mobile-note"><LockKeyhole size={14} /> Persona login arrives with the portal phase.</p>
         </nav>

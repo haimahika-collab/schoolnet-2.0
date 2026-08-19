@@ -1,5 +1,6 @@
 import Link from "next/link";
 import {
+  Accessibility,
   ArrowRight,
   BarChart3,
   Check,
@@ -21,6 +22,7 @@ import { DemoButton } from "@/components/demo-button";
 import { AudienceExplorer } from "@/components/audience-explorer";
 import { TransformationFlow } from "@/components/transformation-flow";
 import { impactMetrics, partners, solutions } from "@/data/site-content";
+import { distinctionPillars } from "@/data/inclusive-learning";
 
 export default function Home() {
   return (
@@ -108,6 +110,29 @@ export default function Home() {
           <div className="transform-copy"><p className="eyebrow">WHY SCHOOLNET</p><h2>Technology is easy to buy. <em>Transformation is harder.</em></h2><p>Schoolnet brings together technology, curriculum content, teacher capability and implementation experience—so digital investments become everyday teaching practice.</p><Link className="button button-light" href="#journey">Transform my school <ArrowRight size={16} /></Link></div>
           <div className="reason-list">
             {[ ["01", "Built for Indian classrooms", "Curriculum-aware solutions designed for varied infrastructure and learning contexts."], ["02", "Technology + content", "Go beyond hardware with digital curriculum, platforms and classroom tools."], ["03", "Teacher enablement", "Build the confidence and pedagogy that turn technology into better lessons."], ["04", "Implementation at scale", "Draw on experience across 100,000+ schools and large public learning programmes."] ].map(([n,t,d]) => <article key={n}><span>{n}</span><div><h3>{t}</h3><p>{d}</p></div><ChevronRight /></article>)}
+          </div>
+        </div>
+      </section>
+
+      <section className="section inclusive-feature" id="inclusive-learning">
+        <div className="shell inclusive-feature-grid">
+          <div className="inclusive-feature-copy">
+            <p className="eyebrow">A MEANINGFUL DIFFERENCE</p>
+            <h2>Inclusive learning,<br /><em>built into the lesson.</em></h2>
+            <p>Schoolnet can go beyond delivering content by helping teachers design for learner variability from the start. See how one objective becomes an explicit, multisensory lesson with flexible ways to participate and respond.</p>
+            <div className="inclusive-mini-pillars">
+              {distinctionPillars.slice(1, 4).map((pillar) => <div key={pillar.number}><span>{pillar.number}</span><strong>{pillar.title}</strong></div>)}
+            </div>
+            <Link className="button" href="/inclusive-learning">Open the Inclusive Lesson Studio <ArrowRight size={16} /></Link>
+            <small>Working prototype · no learner data collected</small>
+          </div>
+          <div className="inclusive-preview" aria-label="Preview of a dyslexia-friendly Grade 4 English lesson">
+            <div className="inclusive-preview-head"><span><Accessibility size={16} /> ACCESS BUILT IN</span><strong>45 min</strong></div>
+            <div className="inclusive-preview-title"><small>GRADE 4 · ENGLISH</small><h3>Build words with <em>-ful</em></h3><p>Read, build and use helpful, careful and joyful.</p></div>
+            <div className="inclusive-preview-flow">
+              {["See it + hear it", "Build it + say it", "Read with support", "Choose how to respond"].map((item, index) => <div key={item}><span>0{index + 1}</span><strong>{item}</strong><Check /></div>)}
+            </div>
+            <div className="inclusive-preview-footer"><span><Sparkles size={14} /> Explicit · multisensory · flexible</span><Link href="/inclusive-learning">Explore plan <ArrowRight size={14} /></Link></div>
           </div>
         </div>
       </section>

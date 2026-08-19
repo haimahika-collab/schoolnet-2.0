@@ -12,7 +12,7 @@ export function Footer() {
           <span className="footer-contact" title="Masked for this prototype"><Mail size={17} /> s•••@schoolnetindia.com</span>
           <span className="footer-contact" title="Masked for this prototype"><Phone size={17} /> +91 120 ••• ••••</span>
         </div>
-        <div className="footer-column"><p>Solutions</p><Link href="/#solutions">Smart Classrooms</Link><Link href="/#solutions">Geneo</Link><Link href="/#solutions">LMS</Link><Link href="/#solutions">KYAN</Link><Link href="/#solutions">ICT Labs</Link></div>
+        <div className="footer-column"><p>Solutions</p><Link href="/#solutions">Smart Classrooms</Link><Link href="/#solutions">Geneo</Link><Link href="/#solutions">LMS</Link><Link href="/inclusive-learning">Inclusive Lesson Studio</Link><Link href="/#solutions">ICT Labs</Link></div>
         <div className="footer-column"><p>For</p><Link href="/#school">Schools</Link><Link href="/#student">Students</Link><Link href="/#teacher">Teachers</Link><Link href="/#impact">Government & CSR</Link></div>
         <div className="footer-column"><p>Company</p><Link href="/about">About</Link><Link href="/#impact">Impact</Link><Link href="/#insights">Insights</Link><a href="https://www.schoolnetindia.com/careers/" target="_blank" rel="noreferrer">Careers <ArrowUpRight size={13} /></a></div>
       </div>

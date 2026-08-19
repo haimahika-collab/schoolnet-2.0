@@ -17,6 +17,13 @@ export const metadata: Metadata = {
     title: "About Schoolnet India | Making Learning Lifelong and Limitless",
     description: "Meet the people and purpose behind Schoolnet India's education transformation work.",
     type: "website",
+    images: [{ url: "/about/who-we-are.png", width: 1250, height: 1464, alt: "School students using laptops in a digital learning classroom" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "About Schoolnet India | Making Learning Lifelong and Limitless",
+    description: "Meet the people and purpose behind Schoolnet India's education transformation work.",
+    images: ["/about/who-we-are.png"],
   },
 };
 
